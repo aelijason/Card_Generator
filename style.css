@@ -1,0 +1,202 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+
+:root{
+    --main : #FFB7D5;
+    --secondry: #3EC1F3;
+    --primary: #30242A;
+    --bg-gradient: linear-gradient(224deg, #DAECF6 0%, rgba(217, 236, 246, 0.54) 5.13%, rgba(218, 224, 227, 0.37) 9.71%, rgba(218, 221, 223, 0.23) 22.55%, rgba(218, 220, 221, 0.16) 27.12%, rgba(217, 219, 220, 0.11) 34.64%, rgba(255, 255, 255, 0.07) 49.87%, rgba(217, 217, 217, 0.00) 100%);
+    --black: black;
+    --border: 1px solid #E8E8E8;
+}
+html, body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 95%;
+}
+
+.registration-form{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* background: red; */
+    padding: 0 80px;
+}
+.overlay{
+    position: absolute;
+    right: 0px;
+    bottom: 0;
+    background: url('images/hero-banner.png');
+    width: 100vw;
+    height: 100%;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+}
+.registration-form .left-side{
+    width: 55%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    overflow: hidden;
+    padding: 20px 0;
+}
+.registration-form .left-side h1{
+    font-size: 38px;
+}
+.left-side .sign-with{
+    position: relative;
+    left: 150px;
+    color: var(--main);
+    font-weight: 800;
+    font-size: 1rem;
+    letter-spacing: .48px;
+}
+.left-side .sign-with::before{
+    position: absolute;
+    top: 50%;
+    left: -150px;
+    content: '';
+    width: 100px;
+    height: 4px;
+    background-color: var(--black);
+}
+.left-side .continue-with{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+.left-side .continue-with a{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    padding: 15px 20px;
+    border-radius: 6px;
+    border: var(--border);
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.left-side .or{
+    display: block;
+    width: 100%;
+    font-weight: 800;
+    font-size: 1.4rem;
+    text-align: center;
+}
+.left-side .form{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+.left-side .form .box{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.left-side .form .form-group{
+    display: flex;flex-direction: column;
+    gap: 10px;
+}
+.left-side .form .form-group1{
+    display: flex;
+    gap: 20px;
+}
+
+.form .btn{
+    height: 50px;
+    width: 100px;
+    margin-top: 15px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    background-color: transparent;
+    cursor: pointer;
+}
+.form .btn img{
+    width: 120%;
+}
+:is(input[type='text'], input[type='email'], input[type='password']){
+   width: 100%; 
+   background-color: #FAFDFF;
+   padding: 15px;
+   border-radius: 6px;
+   border: var(--border);
+}
+:is(input[type='checkbox']){
+    width: 45px;
+}
+.left-side .signin a{
+    color: white;
+    font-weight: 800;
+    text-decoration: none;
+    margin-left: 30px;
+    border: var(--border);
+    padding: 10px 20px; 
+    background-color: var(--main);
+    border-radius: 10px;
+}
+
+.success{
+    color: green;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+@media screen and (max-width: 1200px) {
+    .registration-form{
+        padding: 0 60px;
+    }
+    .overlay{
+        position: absolute;
+        right: 0px;
+        bottom: 0;
+        background: url('images/hero-banner.png');
+        width: 60%;
+        height: 100%;
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        background-size: contain;
+        z-index: -1;
+    }
+    .registration-form .left-side{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 800px) {
+    .registration-form{
+        padding: 0 40px;
+    }
+    .overlay{
+        display: none;
+    }
+    .registration-form .left-side{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .registration-form{
+        padding: 0 20px;
+    }
+    .registration-form .left-side{
+        width: 100%;
+        gap: 20px;
+    }
+    :is(input[type='checkbox']){
+        width: 25px;
+    }
+    .form .btn img{
+        width: 100%;
+    }
+}
