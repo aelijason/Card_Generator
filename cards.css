@@ -1,0 +1,439 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+
+:root{
+    --main : #FFB7D5;
+    --secondry: #3EC1F3;
+    --primary: #30242A;
+    --bg-gradient: linear-gradient(224deg, #DAECF6 0%, rgba(217, 236, 246, 0.54) 5.13%, rgba(218, 224, 227, 0.37) 9.71%, rgba(218, 221, 223, 0.23) 22.55%, rgba(218, 220, 221, 0.16) 27.12%, rgba(217, 219, 220, 0.11) 34.64%, rgba(255, 255, 255, 0.07) 49.87%, rgba(217, 217, 217, 0.00) 100%);
+    --sec-bg: rgb(245, 245, 245);
+    --black: black;
+    --white: white;
+    --border: 1px solid #E8E8E8;
+    --border-hover: 2px solid rgb(36, 36, 245);;
+    --header-bg: #1e1f22;
+
+    --blue: blue;
+    --hover-blue: rgb(36, 36, 245);
+    --green: green;
+    --yellow: yellow;
+
+
+}
+html, body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 95%;
+    background: var(--sec-bg)
+}
+a{
+    color: var(--black);
+    text-decoration: none;
+}
+textarea{
+    font-family: 'Poppins', sans-serif;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main{
+    position: relative;
+    width: 100%;
+    display: flex;
+}
+#main .container{
+   width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#aside{
+    position: relative;
+    width: 90px;
+    min-height: 100vh;
+    background: var(--blue);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow: hidden;
+    transition: all .5s ease;
+}
+#aside:hover{
+    width: 350px;
+    transition-delay: .5s;
+}
+.logobox{
+    width: 90px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.logobox .logo{
+    width: 100%;
+}
+.menus{
+    width: auto;
+    display: flex;
+    flex-direction: column; 
+}
+.menus a{
+    width: 200%;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1.2rem;
+    color: var(--white);
+    background-color:transparent;
+    gap: 35px;
+    padding:20px 0px 20px 35px;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+.menus a:hover{  
+    background-color: var(--hover-blue);
+}
+.menus a span{
+    display: flex;
+}
+.menus a ion-icon{
+    font-size: 1.7rem;
+}
+
+
+#dash-header{
+    width: 100%;
+}
+.dash-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 3%;
+    background-color: white;
+}
+
+.dash-nav .active-link{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.dash-nav .active-link a{
+    opacity: 0.6;
+}
+.dash-nav .active-link i{
+    font-size: .7rem;
+}
+.dash-nav .active-profile{
+    gap: 5px;
+    font-weight: 600;
+    color: var(--black);
+    cursor: pointer;
+    border: var(--border);
+    padding: 5px 12px;
+    border-radius: 10px;
+    user-select: none;
+}
+
+.dash-nav .active-profile .person-profile{
+    width: 50px;
+}
+
+.card-search{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    gap: 20px;
+}
+
+.card-search ion-icon{
+    font-size: 2.2rem;
+    cursor: pointer;
+}
+
+.card-search .searchBox{
+    width: 100%;
+    background: var(--white);
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0px 5px 20px  rgba(217, 219, 220, 0.651),
+    0px 10px 20px  rgba(133, 133, 133, 0.952) ;
+}
+.searchBox ion-icon{
+    font-size: 1.4rem;
+}
+.card-search .searchBox input{
+    width: 100%;
+    padding: 6px;
+    font-size: 1.2rem;
+}
+input::placeholder{
+    font-size: 1.2rem;
+}
+
+.cards{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    gap: 30px;
+}
+.cards .addCard{
+    width: 210px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px dotted var(--green);
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--green);
+}
+.cards .addCard ion-icon{
+    font-size: 2.5rem;
+}
+
+
+.cards .designCard{
+    width: 230px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: var(--white);
+}
+.cards .designCard p{
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: var(--white);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.cards .workCard{
+    background-color: var(--green);
+}
+
+.cards .personalCard{
+    background-color: var(--blue);
+}
+
+.cards .WorkingCard{
+    background-color: var(--yellow);
+}
+:is(.workCard, .personalCard, .WorkingCard, .addCard ){
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+:is(.workCard, .personalCard, .WorkingCard, .addCard ):hover{
+    transform: scale(1.03);
+
+}
+
+
+
+/* new card  */
+.card-Name{
+    position: relative;
+    width: 100%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.card-Name i{
+    font-size: 2rem;
+    cursor: pointer;
+    opacity: .8;
+}
+
+.card-Name .searchName{
+    width: 50%;
+    background: var(--white);
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    border: var(--border)
+}
+
+.searchName i{
+    font-size: 1.2rem;
+    opacity: 0.5;
+}
+.card-Name .searchName input{
+    width: 100%;
+    padding: 6px;
+    font-size: 1.2rem;
+}
+
+.NewCard{
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    border-radius: 15px;
+    padding:15px 20px;
+}
+
+.cardAddItem{
+    width: 420px;
+    border-radius: 15px;
+    padding:15px 20px;
+    box-shadow: 0px 10px 20px rgb(217, 219, 220);
+}
+
+.cardAddItem .AddItem-title{
+    padding: 15px 10px;
+}
+.cardAddItem .AddItem-title h3{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.cardAddItem .itemContainer{
+    padding: 15px 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    place-items: center;
+    text-align: center;
+    row-gap: 40px;
+}
+.itemContainer .addItem{
+    cursor: pointer;
+}
+.itemContainer .addItem i{
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+.itemContainer .addItem p{
+    font-weight: 500;
+}
+
+
+
+.cardPanel{
+    width: 500px;
+    border-radius: 15px;
+    padding:15px 20px;
+    background: white;
+    box-shadow: 0px 10px 20px rgb(217, 219, 220);
+}
+.cardPanel .form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.upload_file .upload{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.upload_file .upload span{
+    position: relative;
+    top: 25px;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+.upload_file .file{
+    padding: 50px 0px 0px;
+    width: 80%
+}
+.upload_file .file_input{
+    display: none;
+}
+
+.profile_names .full_name{
+    padding: 20px 15px 15px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    border-bottom: var(--border);
+    user-select: none;
+}
+
+.profile_names .names{
+    padding: 10px 25px;
+    display: none;
+}
+
+.profile_names .names input{
+    width: 100%;
+    padding:20px 10px 10px;
+    background: transparent;
+    border-bottom: var(--border);
+    transition: all .3s ease;
+}
+
+.profile_names .names input:focus{
+    border-bottom: var(--border-hover);
+}
+
+.profile_title textarea,
+.profile_headline textarea{
+    width: 100%;
+    height: 100px;
+    padding: 20px 10px;
+    resize: none;
+    background: transparent;
+    border-bottom: var(--border);
+}
+
+.profile_department,
+.profile_company {
+    width: 100%;
+    border-bottom: var(--border);
+}
+
+.profile_department input,
+.profile_company input{
+    width: 100%;
+    padding:20px 10px 15px;
+    background: transparent;
+}
+
+.profile_extra{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.profile_save button{
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 10px;
+    font-weight: 600;
+    text-transform: capitalize;
+    border-radius: 5px;
+    cursor: pointer;
+}
